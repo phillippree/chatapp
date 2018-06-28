@@ -7,12 +7,18 @@
         <title>MyChatRoom</title>
     </head>
     <body>
-        <h1 class="jumbotron">My Chat Room</h1>
-        <form method="POST">
+    <div class="container">
+        <h1 class="jumbotron" style="color: #11557C; text-align: center">MY CHAT ROOM</h1>
+        <div class="container" style="margin: 0 auto">
+        <div class="input-group">
+            <form method="POST">
             {{ form.hidden_tag() }}
             {{ form.name.label }}: {{ form.name() }} {% for error in form.name.errors %}{{ error }}{% endfor %}<br>
             {{ form.room.label }}: {{ form.room() }} {% for error in form.room.errors %}{{ error }}{% endfor %}<br>
-            {{ form.submit() }}
+            <div class="btn btn-default">{{ form.submit() }}</div>
         </form>
+        </div>
+        </div>
+    </div>
     </body>
 </html>
